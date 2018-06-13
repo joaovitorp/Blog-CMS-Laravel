@@ -1,0 +1,1 @@
+$('.mobile-btn').on('click',function(){$('.nav').slideToggle('slow');$('.nav').each(function(){$(this).on('click',function(){$('.nav').slideToggle('slow')})})})
