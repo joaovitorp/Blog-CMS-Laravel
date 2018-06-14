@@ -59,6 +59,15 @@
 <script src="{{ asset("assets/js/jquery.js")}}"></script>
 <script src="{{ asset("assets/js/custom.js")}}"></script>
 <link rel="stylesheet" href="{{ asset("assets/css/simple-line-icons.css") }}">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-80737752-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-80737752-1');
+</script>
 @stack('scripts')
 </body>
 </html>
