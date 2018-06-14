@@ -16,7 +16,7 @@ Route::get('/contact', 'ContactController@index')->name('contact');
 Route::post('/contact', 'ContactController@store')->name('contact.send');
 Route::get('/post/{id}-{title?}', 'Admin\\PostController@show')->name('view');
 
-Route::namespace('admin')->prefix('admin')->group(function () {
+Route::namespace('Admin')->prefix('admin')->group(function () {
     Route::get('/login', 'adminAuth@index')->name('admin.auth');
     Route::post('/login', 'adminAuth@login')->name('admin.login');
     Route::middleware("auth")->group( function (){
