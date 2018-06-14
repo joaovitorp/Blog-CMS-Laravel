@@ -4,7 +4,7 @@ namespace App\Http\Controllers\admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Models\admin\Category;
+use App\Models\Admin\Category;
 
 class CategoryController extends Controller
 {

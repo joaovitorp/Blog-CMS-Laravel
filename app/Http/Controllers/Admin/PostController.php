@@ -4,8 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Models\admin\Post;
-use App\Models\admin\Category;
+use App\Models\Admin\Post;
+use App\Models\Admin\Category;
 
 class PostController extends Controller
 {
