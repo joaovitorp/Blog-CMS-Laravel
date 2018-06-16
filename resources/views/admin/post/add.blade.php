@@ -171,7 +171,7 @@
 
 
     $.ajax({
-        url: 'http://devblog/admin/blog/category/new',
+        url: '{{route("admin.cat.new")}}',
         data: data,
         type: 'POST',
         dataType: 'json',
