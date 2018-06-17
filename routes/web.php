@@ -13,6 +13,8 @@
 Auth::routes();
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/contact', 'ContactController@index')->name('contact');
+Route::get('/project', 'ContactController@index')->name('project');
+Route::get('/about', 'AboutController@index')->name('about');
 Route::post('/contact', 'ContactController@store')->name('contact.send');
 Route::get('/post/{id}-{title?}', 'Admin\\PostController@show')->name('view');
 

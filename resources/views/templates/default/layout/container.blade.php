@@ -24,7 +24,7 @@
                         <h3>Desenvolvedor Web </h3>
                
                 <div class="sobre">
-                    <a href="#" class="btn btn-default" title="">Sobre</a>
+                    <a href="{{ route('about') }}" class="btn btn-default" title="">Sobre</a>
                 </div>
              </div>
              <div class="mobile-btn">
@@ -35,9 +35,10 @@
         
         <nav class="nav"> 
                 <ul class="nav-item">
-                    <li ><a  href="{{ route("home")}}" class="active" title="">Home</a></li>
+                    <li ><a  href="{{ route("home")}}" class="{{ (\Request::route()->getName() == 'home') ? 'active' : '' }}"title="">Home</a></li>
+                    <li><a href="{{ route("project")}}" title="" class="{{ (\Request::route()->getName() == 'project') ? 'active' : '' }}" >Projetos</a></li>
+                    <li><a href="{{ route("contact")}}"  class="{{ (\Request::route()->getName() == 'contact') ? 'active' : '' }}"  title="">Contato</a></li>
                     <li><a href="" title="">Blog</a></li>
-                    <li><a href="{{ route("contact")}}" title="">Contato</a></li>
                 </ul>
         </nav>
         <nav class="redes-socias">
