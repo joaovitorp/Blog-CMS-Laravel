@@ -3,8 +3,7 @@
 namespace App\Models\Admin;
 
 use Illuminate\Database\Eloquent\Model;
-// import the Intervention Image Manager Class
-use Intervention\Image\ImageManagerStatic as Image;
+
 
 class Post extends Model
 {
