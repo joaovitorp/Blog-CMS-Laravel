@@ -41,7 +41,7 @@ class Post extends Model
         $path = $request->file('thumb')->storePubliclyAs(
             'thumbs', $name . "." . $request->file("thumb")->extension(), "public"
         );
-        $img = Image::make($request->file('thumb'))->resize(300, 200)->save('foo.jpg');
+       
         return $path;
         // $originalImage= $request->file('thumb');
         // $thumbnailImage = Image::make($originalImage);
