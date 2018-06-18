@@ -66,42 +66,6 @@
 @push("scripts")
 <link rel="stylesheet" href="{{ asset("assets/css/simple-grid.min.css") }}">
 <style>
-    .about h2{
-        margin: 20px 20px 20px 0px;
-    }
-    .about h3{
-        font-size:1.3em;
-        
-        margin: 20px 20px 20px 0px;
-    }
-    h2 small{
-        font-size:14px;
-    }
-
-    .skills{
-        position: relative;
-        display: inline-block;
-        margin: 25px 0 10px;
-        background: rgba(0, 0, 0, .15);
-        height: 4px;
-        width: 100%;
-       
-    }
-    .skill-bar{
-        position: relative;
-        height: 4px;
-       
-        font-size:8px;
-        color:#fff !important;
-        background: #ffb1b1;
-        text-align: center;
-    }
-    .skill-title{
-        position: absolute;
-        top:-25px;
-    }
-    .btn i{
-        color:#fff;
-    }
+    
 </style>
 @endpush

@@ -23,10 +23,14 @@ class HomeController extends Controller
     public function __construct(Post $post){
         $this->post = $post;
     }
-    public function index()
+    public function index($category = null)
     {
         //
         $post = $this->post->paginate(10);
+        if($category){
+            $post = $this->post->where("category",$category)->paginate(10);
+        }
+        
         return view("templates.default.home", compact("post"));
     }
 
