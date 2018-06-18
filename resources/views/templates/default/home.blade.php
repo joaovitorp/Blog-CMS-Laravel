@@ -23,7 +23,7 @@
                             <i class="icon-user"></i><span> João Vitor P.</span> 
                             <i class="icon-calendar"></i> <span> {{ date("d/m/Y",strtotime($posts->created_at))}}</span> 
                             <i class="icon-eye"></i> <span>Não visualizado</span>  
-                            <i class="icon-tag"></i> <span>{{ $posts->category}}</span>  
+                            <i class="icon-tag"></i> <span><a href="{{ route("category",[$posts->category])}}">{{ $posts->category}}</a></span>  
                     </div>    
             </article>
             @endforeach
