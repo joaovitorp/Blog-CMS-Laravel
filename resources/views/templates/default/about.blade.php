@@ -93,7 +93,7 @@
        
         font-size:8px;
         color:#fff !important;
-        background: #545f75;
+        background: #ffb1b1;
         text-align: center;
     }
     .skill-title{
