@@ -37,21 +37,21 @@ class Post extends Model
 
     private function uploadThumb($request)
     {
-        // $name = uniqid(str_random(10));
-        // $path = $request->file('thumb')->storePubliclyAs(
-        //     'thumbs', $name . "." . $request->file("thumb")->extension(), "public"
-        // );
-        // $img = Image::make($request->file('thumb'))->resize(300, 200)->save('foo.jpg');
-        // return $path;
-        $originalImage= $request->file('thumb');
-        $thumbnailImage = Image::make($originalImage);
-        $thumbnailPath = public_path().'/thumbnail/';
-        $originalPath = public_path().'/images/';
-        $thumbnailImage->save($originalPath.time().$originalImage->getClientOriginalName());
-        $thumbnailImage->resize(null, 700, function ($constraint) {
-            $constraint->aspectRatio();
-        });
-        $thumbnailImage->save($thumbnailPath.time().$originalImage->getClientOriginalName()); 
+        $name = uniqid(str_random(10));
+        $path = $request->file('thumb')->storePubliclyAs(
+            'thumbs', $name . "." . $request->file("thumb")->extension(), "public"
+        );
+        $img = Image::make($request->file('thumb'))->resize(300, 200)->save('foo.jpg');
+        return $path;
+        // $originalImage= $request->file('thumb');
+        // $thumbnailImage = Image::make($originalImage);
+        // $thumbnailPath = public_path().'/thumbnail/';
+        // $originalPath = public_path().'/images/';
+        // $thumbnailImage->save($originalPath.time().$originalImage->getClientOriginalName());
+        // $thumbnailImage->resize(null, 700, function ($constraint) {
+        //     $constraint->aspectRatio();
+        // });
+        // $thumbnailImage->save($thumbnailPath.time().$originalImage->getClientOriginalName()); 
         
     }
 
