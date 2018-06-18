@@ -1,5 +1,5 @@
 @extends("templates.default.layout.container")
-@section("title","|")
+@section("title","| Sobre")
 @section("meta")
   <meta property="og:url"           content="" />
   <meta property="og:type"          content="website" />
