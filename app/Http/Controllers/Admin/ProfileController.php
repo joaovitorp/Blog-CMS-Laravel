@@ -82,7 +82,7 @@ class ProfileController extends Controller
             'avatar' => 'file|image|mimes:jpeg,jpg,png|dimensions:min_width=50,min_height=50,max_width=250,max_height=250',
         ]);
         $user = $this->user->find(1);
-        $path = $request->file("avatar") ?  $request->file('avatar')->storePubliclyAs('avatars2', $request->user()->id."." . $request->file("avatar")->extension(), 'public')   : $user->avatar;
+        $path = $request->file("avatar") ?  $request->file('avatar')->storePubliclyAs('avatars', $request->user()->id."." . $request->file("avatar")->extension(), 'public')   : $user->avatar;
         $update = $user->update([
             "name" => $request->get("name"),
             "email" => $request->get("email"),
